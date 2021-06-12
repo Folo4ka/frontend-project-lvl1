@@ -1,24 +1,19 @@
-import readlineSync from 'readline-sync';
-import takeName from './cli.js';
-
-function getRandomInt(max) {
-  return Math.floor(Math.random() * max);
-}
+import { getName, getAnswer } from '../src/cli.js';
+import { MAX_ROUNDS, showGreeting, getRandomInt } from '../src/index.js';
 
 export default function evenGame() {
-  console.log('Welcome to the Brain Games!');
-  const name = takeName();
+  showGreeting();
+  const name = getName();
   console.log(`Hello, ${name}!`);
+
   console.log('Answer "yes" if the number is even, otherwise answer "no".');
 
-  const maxRounds = 3;
-
   let currentRound = 1;
-  while (currentRound <= maxRounds) {
-    const randomNumber = getRandomInt(1000);
+  while (currentRound <= MAX_ROUNDS) {
+    const randomNumber = getRandomInt();
     const trueAnswer = randomNumber % 2 === 0 ? 'yes' : 'no';
     console.log(`Question: ${randomNumber}`);
-    const answer = readlineSync.question('Your answer: ').trim().toLowerCase();
+    const answer = getAnswer().trim().toLowerCase();
 
     if (answer === trueAnswer) {
       console.log('Correct!');
@@ -28,7 +23,7 @@ export default function evenGame() {
       return;
     }
 
-    if (currentRound === maxRounds) {
+    if (currentRound === MAX_ROUNDS) {
       console.log(`Congratulations, ${name}!`);
       return;
     }
