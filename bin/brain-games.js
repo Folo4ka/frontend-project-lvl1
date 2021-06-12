@@ -3,5 +3,5 @@
 import takeName from '../src/cli.js';
 
 console.log('Welcome to the Brain Games!');
-
-takeName();
+const name = takeName();
+console.log(`Hello, ${name}!`);
