@@ -16,8 +16,14 @@
     "url": "https://github.com/Folo4ka/frontend-project-lvl1/issues"
   },
   "homepage": "https://github.com/Folo4ka/frontend-project-lvl1#readme",
-  "module": "module",
+  "type": "module",
   "bin": {
     "brain-games": "bin/brain-games.js"
+  },
+  "dependencies": {
+    "eslint": "^7.28.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.23.4",
+    "readline-sync": "^1.4.10"
   }
 }
