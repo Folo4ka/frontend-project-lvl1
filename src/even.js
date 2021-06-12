@@ -29,11 +29,10 @@ export default function evenGame() {
     }
 
     if (currentRound === maxRounds) {
-       console.log(`Congratulations, ${name}!`);
-       return;
+      console.log(`Congratulations, ${name}!`);
+      return;
     }
 
-    currentRound++;
+    currentRound += 1;
   }
-
 }
