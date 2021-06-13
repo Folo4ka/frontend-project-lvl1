@@ -1,5 +1,9 @@
 import { getName, getAnswer } from './cli.js';
 
+export function isEven(number) {
+  return number % 2 === 0;
+}
+
 export function getRandomInt(max = 10) {
   return Math.floor(Math.random() * max);
 }

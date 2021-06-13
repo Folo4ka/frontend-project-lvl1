@@ -1,6 +1,6 @@
-import { getRandomInt, runEngine } from '../src/index.js';
+import { getRandomInt, runEngine, isEven } from '../src/index.js';
 
-export default function evenGame() {
+export default function runGame() {
   const gameRulesText = 'Answer "yes" if the number is even, otherwise answer "no".';
   let randomNumber;
 
@@ -10,7 +10,7 @@ export default function evenGame() {
   }
 
   function getTrueAswerString() {
-    return randomNumber % 2 === 0 ? 'yes' : 'no';
+    return isEven(randomNumber) ? 'yes' : 'no';
   }
 
   runEngine(gameRulesText, getQuestionText, getTrueAswerString);

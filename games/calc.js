@@ -7,7 +7,7 @@ const getOperationResult = {
   '*': (a, b) => a * b,
 };
 
-export default function calcGame() {
+export default function runGame() {
   const gameRulesText = 'What is the result of the expression?';
   let randomNumber1;
   let randomNumber2;
